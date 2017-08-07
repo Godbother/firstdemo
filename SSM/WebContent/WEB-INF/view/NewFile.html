@@ -133,8 +133,9 @@
 }
 
 .nextmenu {
+	position:absolute;
 	display: none;
-	float: left;
+	left:308px;
 	background-color: white;
 	z-index: 9;
 	padding: 16px 10px 10px;
@@ -177,17 +178,81 @@ a {
 }
 
 .big-pic {
+	width: 100%;
+	height: 60%;
+}
+
+.standerd{
+	width: 100%;
+	height: 100%;
+}
+
+.sec-col{
 	margin-left: 10px;
 	float: left;
 	width: 49%;
-	height: 480px;
+	height: 95%;
+	z-index: 8;
 }
-
-.un_standerd {
+.hot-image{
 	width: 100%;
-	height: 70%;
+	height: 45%;
+	margin-top: 7px;
 }
-
+.left_img{
+	float: left;
+	height:87%;
+	width: 49%;
+	margin-right: 10px;
+}
+.right_img{
+	float: left;
+	width: 49%;
+	height:87%;
+}
+.thir-col{
+	float: left;
+	height: 95%;
+	z-index: 8;
+	width: 14%;
+}
+.message{
+	padding: 0 15px;
+    height: 115px;
+    border-bottom: 1px solid #e6e6e6;
+    border: 1px solid;
+}
+.hot-news{
+	overflow: hidden;
+    padding: 0 15px;
+    height: 154px;
+    border-bottom: 1px solid #e6e6e6;
+}
+.more-servers{
+	overflow: hidden;
+    position: relative;
+    height: 210px;
+}
+.user_info{
+	overflow: hidden;
+    position: relative;
+    padding: 15px 0 15px;
+    height: 75px;
+}
+.user_img_box{
+	float: left;
+	z-index: 10;
+}
+.user_img{
+	width: 50px;
+	height: 50px;
+}
+.hello_text{
+	margin-left: 10px;
+}
+.login{
+	float: left;
+}
 </style>
 <title>首页</title>
 </head>
@@ -259,11 +324,12 @@ a {
 			<!--隐藏部分，子菜单  -->
 			<div class="nextmenu" id="nextmenu">本区域暂未开放</div>
 
+			<!--轮播已修复  -->
 			<div class="sec-col">
 				<!--图片轮播  -->
 				<div class="big-pic">
 					<div id="carousel-example-generic"
-						class="carousel slide un_standerd" data-ride="carousel">
+						class="carousel slide standerd" data-ride="carousel">
 						<!-- 换图按钮 -->
 						<ol class="carousel-indicators">
 							<li data-target="#carousel-example-generic" data-slide-to="0"
@@ -273,7 +339,7 @@ a {
 						</ol>
 
 						<!-- 图片部分，带滑动 -->
-						<div class="carousel-inner un_standerd" role="listbox">
+						<div class="carousel-inner standerd" role="listbox">
 							<div class="item active">
 								<img src="../image/" alt="...">
 							</div>
@@ -297,10 +363,47 @@ a {
 						</a>
 					</div>
 				</div>
-			
+				
+				<div class="hot-image">
+					<div class="left_img">
+						<img alt="../image/test1.jpg" src="../image/test1.jpg" class="standerd" id="img-left">
+					</div>
+					<div class="right_img">
+						<img alt="../image/test2.jpg" src="../image/test2.jpg" class="standerd" id="img-right">
+					</div>
+				</div>
 			</div>
 
-
+			<div class="thir-col">
+				<div class="message">
+					<div class="user_info">
+						<div class="user_img_box">
+							<img alt="x" src="../image/tubiao.jpg" class="user_img">
+						</div>
+						<div class="user_img_box">
+							<div class="hello_text">
+								hi,你好
+							</div>
+							<div class="user_do">
+								<a class="btn btn-primary login">登录</a>
+								<a class="btn btn-primary regist">注册</a>
+							</div>
+						</div>
+						
+					</div>
+					<div class="user_choise">
+						
+					</div>
+				</div>
+				<div class="hot-news">
+					
+				</div>
+				<div class="more-servers">
+					<div class="">
+						
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </body>
@@ -315,5 +418,13 @@ a {
 	$("li.cate-menu-item").mouseleave(function() {
 		$("#nextmenu").hide();
 	});
+	
+	$("#img-left").click(function() {
+		location.href = "#";
+	});
+	$("#img-right").click(function() {
+		location.href = "#";
+	});
+	
 </script>
 </html>
