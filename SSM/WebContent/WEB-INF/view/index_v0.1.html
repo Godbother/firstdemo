@@ -8,6 +8,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="author" content="Fei">
 <link href="../../../public/css/bootstrap.min.css" rel="stylesheet">
+<link href="../../../public/css/signin.css" rel="stylesheet">
 <link href="../../../public/css/bootstrap-theme.min.css"
 	rel="stylesheet">
 <link href="../../../public/css/ie10-viewport-bug-workaround.css"
@@ -133,9 +134,9 @@
 }
 
 .nextmenu {
-	position:absolute;
+	position: absolute;
 	display: none;
-	left:308px;
+	left: 308px;
 	background-color: white;
 	z-index: 9;
 	padding: 16px 10px 10px;
@@ -182,76 +183,113 @@ a {
 	height: 60%;
 }
 
-.standerd{
+.standerd {
 	width: 100%;
 	height: 100%;
 }
 
-.sec-col{
+.sec-col {
 	margin-left: 10px;
 	float: left;
 	width: 49%;
 	height: 95%;
 	z-index: 8;
 }
-.hot-image{
+
+.hot-image {
 	width: 100%;
 	height: 45%;
 	margin-top: 7px;
 }
-.left_img{
+
+.left_img {
 	float: left;
-	height:87%;
+	height: 87%;
 	width: 49%;
 	margin-right: 10px;
 }
-.right_img{
+
+.right_img {
 	float: left;
 	width: 49%;
-	height:87%;
+	height: 87%;
 }
-.thir-col{
+
+.thir-col {
 	float: left;
 	height: 95%;
 	z-index: 8;
 	width: 14%;
 }
-.message{
+
+.message {
 	padding: 0 15px;
-    height: 115px;
-    border-bottom: 1px solid #e6e6e6;
-    border: 1px solid;
+	height: 115px;
+	border-bottom: 1px solid #e6e6e6;
+	border: 1px solid;
 }
-.hot-news{
+
+.hot-news {
 	overflow: hidden;
-    padding: 0 15px;
-    height: 154px;
-    border-bottom: 1px solid #e6e6e6;
+	height: 154px;
+	border: 1px solid black;
+	margin-bottom: 0px;
 }
-.more-servers{
+
+.more-servers {
 	overflow: hidden;
-    position: relative;
-    height: 210px;
+	position: relative;
+	height: 210px;
+	border: 1px solid;
 }
-.user_info{
+
+.user_info {
 	overflow: hidden;
-    position: relative;
-    padding: 15px 0 15px;
-    height: 75px;
+	position: relative;
+	padding: 15px 0 15px;
+	height: 75px;
 }
-.user_img_box{
+
+.user_img_box {
 	float: left;
 	z-index: 10;
 }
-.user_img{
+
+.user_img {
 	width: 50px;
 	height: 50px;
 }
-.hello_text{
+
+.hello_text {
 	margin-left: 10px;
 }
-.login{
+
+.login {
 	float: left;
+}
+
+.user_do {
+	overflow: hidden;
+	margin-top: 2px;
+	width: 100%;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	margin-left: 10px;
+}
+
+.choise {
+	display: inline-block;
+	margin-right: 10px;
+	width: 70px;
+	height: 30px;
+	border: 2px solid #e01222;
+	line-height: 25px;
+	font-size: 12px;
+	text-align: center;
+}
+.news{
+	height: 30px;
+	line-height: 28px;
 }
 </style>
 <title>首页</title>
@@ -288,10 +326,11 @@ a {
 			</div>
 
 			<div class="hot-title">
-				<a href="#" class="act">好东西</a> <a href="#" class="act">脏东西</a> <a
-					href="#" class="act">傻逼东西</a>
+				<a href="#" class="act">华硕Y481</a> <a href="#" class="act">IPad MiNi</a> <a
+					href="#" class="act">华为荣耀4X</a>
 			</div>
 		</div>
+		
 		<div class="daohang">
 			<div class="masthead">
 				<nav>
@@ -328,8 +367,8 @@ a {
 			<div class="sec-col">
 				<!--图片轮播  -->
 				<div class="big-pic">
-					<div id="carousel-example-generic"
-						class="carousel slide standerd" data-ride="carousel">
+					<div id="carousel-example-generic" class="carousel slide standerd"
+						data-ride="carousel">
 						<!-- 换图按钮 -->
 						<ol class="carousel-indicators">
 							<li data-target="#carousel-example-generic" data-slide-to="0"
@@ -363,13 +402,15 @@ a {
 						</a>
 					</div>
 				</div>
-				
+
 				<div class="hot-image">
 					<div class="left_img">
-						<img alt="../image/test1.jpg" src="../image/test1.jpg" class="standerd" id="img-left">
+						<img alt="../image/test1.jpg" src="../image/test1.jpg"
+							class="standerd" id="img-left">
 					</div>
 					<div class="right_img">
-						<img alt="../image/test2.jpg" src="../image/test2.jpg" class="standerd" id="img-right">
+						<img alt="../image/test2.jpg" src="../image/test2.jpg"
+							class="standerd" id="img-right">
 					</div>
 				</div>
 			</div>
@@ -381,30 +422,33 @@ a {
 							<img alt="x" src="../image/tubiao.jpg" class="user_img">
 						</div>
 						<div class="user_img_box">
-							<div class="hello_text">
-								hi,你好
-							</div>
+							<div class="hello_text">hi,你好</div>
 							<div class="user_do">
-								<a class="btn btn-primary login">登录</a>
-								<a class="btn btn-primary regist">注册</a>
+								<!--尚未定义a标签样式  -->
+								<a class="login">登录</a> <a class="regist">注册</a>
 							</div>
 						</div>
-						
+
 					</div>
 					<div class="user_choise">
-						
+						<a class="choise">新人福利</a> <a class="choise">充值会员</a>
 					</div>
 				</div>
-				<div class="hot-news">
-					
-				</div>
+				<div class="panel panel-primary hot-news">
+		            <div class="panel-heading">
+		              <h3 class="panel-title">公告</h3>
+		            </div>
+		            <div class="panel-body">
+		              	本站建设中，暂无更多信息
+		            </div>
+	          	</div>
 				<div class="more-servers">
-					<div class="">
-						
-					</div>
+					<div class="">本位暂空</div>
 				</div>
 			</div>
+		
 		</div>
+		
 	</div>
 </body>
 <script src="../../../public/jquery/jquery.min.js"></script>
@@ -418,13 +462,12 @@ a {
 	$("li.cate-menu-item").mouseleave(function() {
 		$("#nextmenu").hide();
 	});
-	
+
 	$("#img-left").click(function() {
 		location.href = "#";
 	});
 	$("#img-right").click(function() {
 		location.href = "#";
 	});
-	
 </script>
 </html>
